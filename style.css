@@ -1,0 +1,255 @@
+/* Global Styles */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #fff; /* Change background to white */
+    color: #333; /* Change text color for better contrast */
+    padding-right:  20px; /* Adjust padding for height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  }
+  
+  .logo img {
+    height: 13vh;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: #333; /* Change link color for better contrast */
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 10px 15px; /* Increase padding for height */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  /* Change color on hover */
+  nav a:hover {
+    color: #FFD700; /* Change to yellow on hover */
+  }
+  
+  /* Search Bar Styles */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 5em;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded edges */
+    outline: none;
+    width: 200px;
+    height: 20px; /* Adjust width as needed */
+  }
+  
+  .login-button {
+    background-color: #FFD700; /* Yellow color */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded edges */
+    padding: 10px 15px;
+    margin-left: 10px; /* Space between search and button */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  /* Main Content Styles */
+  main {
+    padding: 0; /* Remove padding to allow full height for hero */
+  }
+  
+  .hero {
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+ /* Slider Styles */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    min-width: 100%; /* Each slide takes full width */
+    height: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+  }
+  
+  /* Pagination Dots */
+  .pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb; /* Inactive dot color */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #FFD700; /* Active dot color */
+  }
+  
+  /* Slider Navigation Buttons */
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000; /* Ensure buttons are above other content */
+  }
+  
+  .slider-button.left {
+    left: 10px;
+  }
+  
+  .slider-button.right {
+    right: 10px;
+  }
+
+  .popular-sports-heading {
+    text-align: center; /* Center the heading */
+    font-size: 2.5rem; /* Font size for the heading */
+    margin-top: 30px;
+    margin-bottom: 40px; /* Margin above and below the heading */
+    color: #333; /* Text color */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+ /* Sports Grid Styles */
+
+.sports-grid {
+    margin-top: 20px; /* Add a gap */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 20px; /* Space between cards */
+    padding: 0 20px; /* Add padding to the left and right */
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    overflow: hidden; /* Ensure no overflow */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    position: relative; /* Position for pseudo-element */
+    padding: 15px; /* Padding inside the card */
+    height: 300px; /* Fixed height for cards */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Align children vertically */
+    justify-content: space-between; /* Space out content */
+    margin: 0 10px; /* Equal margin on left and right for spacing */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  }
+  
+  /* Card Heading and Description */
+  .card h3 {
+    margin: 10px 0 5px; /* Margin for heading */
+    font-size: 1.5em; /* Font size for heading */
+  }
+  
+  .card p {
+    font-size: 1em; /* Font size for description */
+    color: #666; /* Grey color for description */
+  }
+  
+  /* Hover Effect */
+  .card:hover {
+    background-color: #0072C6; /* Change to blue on hover */
+    color: #fff; /* Change text color to white */
+  }
+  
+  /* Image Zoom Effect on Hover */
+  .card:hover img {
+    transform: scale(1.1); /* Zoom in the image */
+  }
+  
+  /* Optional: Add a slight upward movement on hover */
+  .card:hover {
+    transform: translateY(-5px); /* Slight upward movement */
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333; /* Example footer background color */
+    color: #fff; /* Example footer text color */
+    padding: 20px; /* Padding inside the footer */
+    text-align: center; /* Center the text */
+    margin-top: 40px; /* Gap between the grid and footer */
+  }
+  /* Footer Styles */
+  
+  /* Optional: Add styles for navigation buttons */
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .slider-button.left {
+    left: 10px;
+  }
+  
+  .slider-button.right {
+    right: 10px;
+  }
